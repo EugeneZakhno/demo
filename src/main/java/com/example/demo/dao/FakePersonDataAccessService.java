@@ -30,6 +30,7 @@ public class FakePersonDataAccessService implements PersonDao {
 
     @Override
     public int deletePersonById(UUID id) {
+      Optional<Person> personMaybe = selectPersonById(id);
         return 0;
     }
 
